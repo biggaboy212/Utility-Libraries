@@ -44,7 +44,7 @@ local Teleports = {
 
 ListLibrary:CreateList("Teleport Menu")
 
-for Name,TP in ipairs(Teleports) do
+for Name,TP in pairs(Teleports) do
 	ListLibrary:CreateListButton(Name, function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(TP)
 	end)
